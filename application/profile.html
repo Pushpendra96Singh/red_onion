@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <!-- fontawesome-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- end -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+    <!-- datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+</head>
+
+<body>
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="food-m">Profile</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="profile-section py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" col-lg-3 col-md-4">
+                    <ul class="nav nav-pills nav-justified flex-column bg-white rounded shadow p-3 mb-0 my-account-tab"
+                        id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link rounded " id="dashboard" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-user-circle fa-lg left-aside"></i> Profile
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="order-history" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-history fa-lg left-aside"></i> Orders
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="notification" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-bell fa-lg left-aside"></i> Notification
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="wishlist" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="far fa-heart fa-lg left-aside"></i> Favorite
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="v-pills-settings-tab" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-map-marked-alt fa-lg left-aside"></i> Address
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="wallet-details" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-wallet fa-lg left-aside"></i> Wallet
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="transaction-details" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="far fa-money-bill-alt fa-lg left-aside"></i> Transaction
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="transaction-details" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-users nav-icon fa-lg left-aside"></i> Referral Customers
+                                    </h6>
+                                </div>
+                            </a>
+                        </li> -->
+
+                        <li class="nav-item mt-2">
+                            <a class="nav-link rounded " id="logout_btn" href="#">
+                                <div class="text-left py-1 px-3">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-sign-out-alt fa-lg left-aside"></i> Logout
+                                    </h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="col-md-9 col-12 ">
+                    <div class="ossan-box">
+                    <div class="row mx-0">
+                    
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Profile                        </div>
+                            <div class="card-body">
+                                <i class="fa fa-user-circle dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Orders                        </div>
+                            <div class="card-body">
+                                <i class="fas fa-history dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Notification                        </div>
+                            <div class="card-body">
+                                <i class="far fa-bell dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Favorite                        </div>
+                            <div class="card-body">
+                                <i class="far fa-heart dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Address                        </div>
+                            <div class="card-body">
+                                <i class="far fa-id-badge dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Wallet                        </div>
+                            <div class="card-body">
+                                <i class="fa fa-wallet dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 card text-center border-0 mr-3 mb-3">
+                        <a href="#" class="link-color">
+                            <div class="card-header bg-transparent">
+                                Transaction                        </div>
+                            <div class="card-body">
+                                <i class="fas fa-exchange-alt dashboard-icon link-color fa-lg"></i>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                
+            </div> -->
+             <!-- order- -->
+             <div class="col-lg-9 col-md-8 col-12">
+                <div class=" border-0">
+                    <div class="card-header bg-white">
+                        <div class="row">
+                            <h1 class="col-12 text-center">Order</h1>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="bootstrap-table bootstrap4">
+                            <div class="fixed-table-toolbar">
+                                <div class="bs-bars float-left"></div>
+                                <div class="columns columns-right btn-group float-right"><button
+                                        class="btn btn-secondary" type="button" name="refresh" aria-label="Refresh"
+                                        title="Refresh"><i class="fa fa-sync"></i> </button>
+                                    <div class="keep-open btn-group" title="Columns">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-toggle="dropdown" aria-label="Columns" title="Columns">
+                                            <i class="fa fa-th-list"></i>
+
+                                            <span class="caret"></span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right"><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="id" value="0" checked="checked">
+                                                <span>ID</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="name" value="1" checked="checked"> <span>User
+                                                    Name</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="type" value="2" checked="checked">
+                                                <span>Type</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="amount" value="3" checked="checked">
+                                                <span>Amount</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="status" value="4" checked="checked">
+                                                <span>Status</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="message" value="5" checked="checked">
+                                                <span>Message</span></label><label
+                                                class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                    data-field="date" value="6" checked="checked">
+                                                <span>Date</span></label></div>
+                                    </div>
+                                </div>
+                                <div class="float-right search btn-group">
+                                    <input class="form-control search-input" type="search" placeholder="Search"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="fixed-table-container" style="padding-bottom: 0px;">
+                                <div class="fixed-table-header" style="display: none;">
+                                    <table></table>
+                                </div>
+                                <div class="fixed-table-body">
+                                    <div class="fixed-table-loading table table-bordered table-hover open"
+                                        style="top: 47.5px; display: none;">
+                                        <span class="loading-wrap">
+                                            <!-- <span class="loading-text" style="font-size: 32px;">Loading, please
+                                                wait</span> -->
+                                            <span class="animation-wrap"><span class="animation-dot"></span></span>
+                                        </span>
+
+                                    </div>
+                                    <table class="table-striped table table-bordered table-hover"
+                                        data-toggle="table"
+                                        data-url="https://annadatasukhibhav.com/my-account/get-wallet-transactions"
+                                        data-click-to-select="true" data-side-pagination="server"
+                                        data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                        data-search="true" data-show-columns="true" data-show-refresh="true"
+                                        data-trim-on-search="false" data-sort-name="id" data-sort-order="desc"
+                                        data-mobile-responsive="true" data-toolbar="" data-show-export="true"
+                                        data-maintain-selected="true"
+                                        data-query-params="customer_wallet_query_params">
+                                        <thead>
+                                            <tr>
+                                                <th style="" data-field="id">
+                                                    <div class="th-inner sortable both desc">ID</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="name">
+                                                    <div class="th-inner ">Order Number#</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="type">
+                                                    <div class="th-inner ">Placed on</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="amount">
+                                                    <div class="th-inner ">Method</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="status">
+                                                    <div class="th-inner ">Items</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="status">
+                                                    <div class="th-inner ">Quantity</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="message">
+                                                    <div class="th-inner ">Total</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                                <th style="" data-field="date">
+                                                    <div class="th-inner ">Action</div>
+                                                    <div class="fht-cell"></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-index="1">
+                                                <td>1</td>
+                                                <td>635981586200289</td>
+                                                <td>03/12/2022</td>
+                                                <td>COD</td>
+                                                <td class="col-md-5"><a
+                                                        href="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                        data-toggle="lightbox" data-gallery="gallery">
+                                                        <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg" class="img-fluid rounded"></a>
+                                                    </td>
+                                                    <td>2</td>
+                                                        <td>₹105.60	</td>
+                                                        <td><i class="fa-regular fa-eye"></i></td>
+                                            </tr>
+                                            <!-- <tr class="no-records-found">
+                                                <td colspan="7">No matching records found</td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="fixed-table-footer">
+                                    <table>
+                                        <thead>
+                                            <tr></tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="fixed-table-pagination" style="display: none;">
+                                <div class="float-left pagination-detail"><span class="pagination-info">
+                                        Showing 1 to 0 of 0 rows
+                                    </span><span class="page-list" style="display: none;"><span
+                                            class="btn-group dropdown dropup">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown">
+                                                <span class="page-size">
+                                                    10
+                                                </span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu"><a class="dropdown-item " href="#">5</a>
+                                            </div>
+                                        </span> rows per page</span></div>
+                                <div class="float-right pagination" style="display: none;">
+                                    <ul class="pagination">
+                                        <li class="page-item page-pre"><a class="page-link"
+                                                aria-label="previous page" href="javascript:void(0)">‹</a></li>
+                                        <li class="page-item page-next"><a class="page-link" aria-label="next page"
+                                                href="javascript:void(0)">›</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- order-end -->
+
+
+                <!-- for-notification -->
+                <div class="col-md-8 col-12">
+                    <div class=" border-0">
+                        <div class="card-header bg-white">
+                            <h1>Notification</h1>
+                        </div>
+                        <div class="card-body py-3 px-0">
+                            <div class="bootstrap-table bootstrap4">
+                                <div class="fixed-table-toolbar">
+                                    <div class="bs-bars float-left"></div>
+
+                                    <div class="columns columns-right btn-group float-right">
+                                        <div class="float-right search btn-group">
+                                            <input class="form-control
+                                          
+                                          search-input" type="search" placeholder="Search" autocomplete="off">
+                                        </div>
+                                        <button class="btn btn-secondary" type="button" name="refresh"
+                                            aria-label="Refresh" title="Refresh"><i class="fa fa-sync"></i> </button>
+                                        <div class="keep-open btn-group" title="Columns">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-label="Columns" title="Columns"
+                                                aria-expanded="false">
+                                                <i class="fa fa-th-list"></i>
+
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end"
+                                                style="position: absolute; transform: translate3d(58px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <label class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="id" value="0" checked="checked">
+                                                    <span>Id</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="title" value="1" checked="checked">
+                                                    <span>Title</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="message" value="2" checked="checked">
+                                                    <span>Message</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="image" value="3" checked="checked">
+                                                    <span>Image</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="fixed-table-container" style="padding-bottom: 0px;">
+                                    <div class="fixed-table-header" style="display: none;">
+                                        <table></table>
+                                    </div>
+                                    <div class="fixed-table-body">
+
+                                        <table id="example" class="table-striped table table-bordered table-hover"
+                                            data-toggle="table"
+                                            data-url="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                            data-click-to-select="true" data-side-pagination="server"
+                                            data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                            data-search="true" data-show-columns="true" data-show-refresh="true"
+                                            data-trim-on-search="false" data-sort-name="id" data-sort-order="desc"
+                                            data-mobile-responsive="true" data-toolbar="" data-show-export="true"
+                                            data-maintain-selected="true"
+                                            data-export-types="[&quot;txt&quot;,&quot;excel&quot;]"
+                                            data-query-params="queryParams">
+                                            <thead>
+                                                <tr>
+                                                    <th style="" data-field="id">
+                                                        <div class="th-inner sortable both desc">Id</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="title">
+                                                        <div class="th-inner sortable both">Title</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="message">
+                                                        <div class="th-inner sortable both">Message</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th class="col-md-5" style="" data-field="image">
+                                                        <div class="th-inner ">Image</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-index="0">
+                                                    <td>4</td>
+                                                    <td>big discounts</td>
+                                                    <td>get upto 20% discounts</td>
+                                                    <td class="col-md-5"><a
+                                                            href="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                            data-toggle="lightbox" data-gallery="gallery">
+                                                            <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                                class="img-fluid rounded col-md-3"></a></td>
+                                                </tr>
+                                                <tr data-index="1">
+                                                    <td>2</td>
+                                                    <td>Flat 70 Discount</td>
+                                                    <td>Hurry</td>
+                                                    <td class="col-md-5"><a
+                                                            href="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                            data-toggle="lightbox" data-gallery="gallery">
+                                                            <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                                class="img-fluid rounded col-md-3"></a></td>
+                                                </tr>
+                                                <tr data-index="2">
+                                                    <td>2</td>
+                                                    <td>Flat 70 Discount</td>
+                                                    <td>Hurry</td>
+                                                    <td class="col-md-5"><a
+                                                            href="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                            data-toggle="lightbox" data-gallery="gallery">
+                                                            <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                                class="img-fluid rounded col-md-3"></a></td>
+                                                </tr>
+                                                <tr data-index="3">
+                                                    <td>1</td>
+                                                    <td>Big discount</td>
+                                                    <td>Test</td>
+                                                    <td class="col-md-5"><a
+                                                            href="https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                            data-toggle="lightbox" data-gallery="gallery">
+                                                            <img src=https://html.themefax.com/regfood/images/menu2_img_1.jpg"
+                                                                class="img-fluid rounded col-md-3"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-footer">
+                                        <table>
+                                            <thead>
+                                                <tr></tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- notification-end -->
+
+                <!-- profile-sec -->
+                <div class="col-md-8 col-12">
+                    <div class="card-header bg-white">
+                        <h1>Update Profile</h1>
+                    </div>
+                    <form class="form-submit-event" method="POST"
+                        action="https://annadatasukhibhav.com/login/update_user">
+                        <input type="hidden" name="old_bank_pass" value="">
+                        <input type="hidden" name="old_pro_pic" value="">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="username" class="col-form-label">Username*</label>
+                                <input type="text" class="form-control" id="username" placeholder="Type Username here"
+                                    name="username" value="ritik">
+                            </div>
+                            <div class="form-group col-md-6 gen_btn">
+                                <label class="col-form-label">Gender *</label>
+                                <div id="gender" class="btn-group">
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="gender" value="male"> Male
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="gender" value="female"> Female
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="gender" value="others"> Others
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="date" class="col-form-label">DOB</label>
+
+
+                                <input type="date" class="form-control" id="dob" placeholder="Enter DOB" name="dob"
+                                    value="8-7-2023">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="mobile" class="col-form-label">Mobile*</label>
+                                <div>
+                                    <input type="phone" class="form-control" id="mobile"
+                                        placeholder="Type Mobile No. here" name="mobile" value="9876543210">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="new" class="col-form-label">Email </label>
+                                <input type="email" class="form-control" id="new" placeholder="Email" name="email"
+                                    value="">
+                            </div>
+                            <div class="form-group col-md-6"></div>
+                            <div class="form-group col-md-6">
+                                <label for="address_proof" class="col-form-label">Profile Picture </label>
+                                <div class="profilesize">
+                                    <input type="file" class="form-control" name="pro_pic" id="pro_pic"
+                                        accept="image/*">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="address_proof" class="col-form-label">Bank Passbook </label>
+                                <div class="">
+                                    <input type="file" class="form-control" name="bank_pass" id="bank_pass"
+                                        accept="image/*">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="card-header bg-white">
+                            <h1>Change Password</h1>
+                        </div>
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label for="old" class="col-form-label"><small>Old Password</small></label>
+                                <input type="password" class="form-control" id="old"
+                                    placeholder="Type Old Password here" name="old">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="new" class="col-form-label">New Password</label>
+                                <input type="password" class="form-control" id="new"
+                                    placeholder="Type New Password here" name="new">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="new_confirm" class="col-form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="new_confirm"
+                                    placeholder="Type Confirm Password here" name="new_confirm">
+                            </div>
+                        </div>
+                        <button type="submit" class="button button-success btn-5 submit_btn">Save</button>
+                        <div class="d-flex justify-content-center mt-3">
+                            <div class="form-group" id="error_box">
+                            </div>
+                        </div>
+                    </form>
+                    <!--end profile -->
+                </div>
+                <!-- profile-end -->
+
+                <!-- favorite-start -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="tf__menu_item">
+                                <div class="tf__menu_item_img">
+                                    <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg" alt="menu"
+                                        class="img-fluid w-100">
+                                </div>
+                                <div class="tf__menu_item_text">
+                                    <a class="category" href="#">Biryani</a>
+                                    <a class="title" href="menu_details.html">Hyderabadi biryani</a>
+                                    <p class="rating">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                                        <i class="far fa-star" aria-hidden="true"></i>
+                                        <span>24</span>
+                                    </p>
+                                    <h5 class="price">₹65.00 <del>₹90.00</del></h5>
+                                    <a class="tf__add_to_cart" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#cartModal">add
+                                        to cart</a>
+                                    <ul class="d-flex flex-wrap justify-content-end li-icon">
+                                        <li><a href="#"><i class="fas fa-heart" aria-hidden="true"></i></a></li>
+                                        <li><a href="menu_details.html"><i class="far fa-eye"
+                                                    aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="tf__menu_item">
+                                <div class="tf__menu_item_img">
+                                    <img src="https://html.themefax.com/regfood/images/menu2_img_1.jpg" alt="menu"
+                                        class="img-fluid w-100">
+                                </div>
+                                <div class="tf__menu_item_text">
+                                    <a class="category" href="#">Biryani</a>
+                                    <a class="title" href="menu_details.html">Hyderabadi biryani</a>
+                                    <p class="rating">
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star" aria-hidden="true"></i>
+                                        <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                                        <i class="far fa-star" aria-hidden="true"></i>
+                                        <span>24</span>
+                                    </p>
+                                    <h5 class="price">₹65.00 <del>₹90.00</del></h5>
+                                    <a class="tf__add_to_cart" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#cartModal">add
+                                        to cart</a>
+                                    <ul class="d-flex flex-wrap justify-content-end li-icon">
+                                        <li><a href="#"><i class="fas fa-heart" aria-hidden="true"></i></a></li>
+                                        <li><a href="menu_details.html"><i class="far fa-eye"
+                                                    aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+
+                <!-- address-add -->
+                <div class="col-md-8 col-12">
+                    <div class=" border-0">
+                        <div class="card-header bg-white">
+                            <h1>Address</h1>
+                        </div>
+                        <form action="https://annadatasukhibhav.com/my-account/add-address" method="POST"
+                            id="add-address-form" class="mt-4 p-4">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="name" class="control-label">Name</label>
+                                    <input type="text" class="form-control" id="address_name" name="name"
+                                        placeholder="Name">
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="mobile_number" class="control-label">Mobile Number</label>
+                                    <input type="text" class="form-control" id="mobile_number" name="mobile"
+                                        placeholder="Mobile Number">
+                                </div>
+
+
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="alternate_mobile" class="control-label">Alternate Mobile</label>
+                                    <input type="text" class="form-control" id="alternate_mobile"
+                                        name="alternate_mobile" placeholder="Alternate  Mobile Number">
+                                </div>
+
+
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="landmark" class="control-label">Landmark</label>
+                                    <input type="text" class="form-control" id="landmark" name="landmark"
+                                        placeholder="Enter landmark">
+                                </div>
+
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label for="address" class="control-label">Address</label>
+                                    <textarea name="address" class="form-control" id="address" cols="30" rows="4"
+                                        placeholder="#Door no, Street Address, Locality, Area, Pincode"></textarea>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="city" class="control-label">City</label>
+                                    <select name="city_id" id="city" class="form-control">
+                                        <option value="">Select City</option>
+                                        <option value="15">Chennai</option>
+                                        <option value="16">Indore</option>
+                                        <option value="17">Bhopal</option>
+                                        <option value="18">Jabalpur</option>
+                                        <option value="19">Nagpur</option>
+                                        <option value="20">Sagar</option>
+                                        <option value="21">Itarsi</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label for="area" class="control-label">Area</label>
+                                    <select name="area_id" id="area" class="form-control">
+                                        <option value="">Select Area</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="Zipcode" class="control-label">Pincode</label>
+                                    <input type="text" class="form-control" id="pincode" name="pincode"
+                                        placeholder="Zipcode" readonly="">
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="state" class="control-label">State</label>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="State">
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                                    <label for="country" class="control-label">Country</label>
+                                    <input type="text" class="form-control" name="country" id="country"
+                                        placeholder="Country">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label for="country" class="control-label">Type</label>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="type" id="home" value="home">
+                                        <label for="home" class="form-check-label text-dark">Home</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="type" id="office"
+                                            value="office" placeholder="Office">
+                                        <label for="office" class="form-check-label text-dark">Office</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="type" id="other"
+                                            value="other" placeholder="Other">
+                                        <label for="other" class="form-check-label text-dark">Other</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <input type="submit" class="button button-rounded button-warning"
+                                        id="save-address-submit-btn" value="Save">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <div id="save-address-result"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="card-body">
+                            <div class="bootstrap-table bootstrap4">
+                                <div class="fixed-table-toolbar">
+                                    <div class="bs-bars float-left"></div>
+                                    <div class="columns columns-right btn-group float-right"><button
+                                            class="btn btn-secondary" type="button" name="refresh" aria-label="Refresh"
+                                            title="Refresh"><i class="fa fa-sync"></i> </button>
+                                        <div class="keep-open btn-group" title="Columns">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-label="Columns" title="Columns">
+                                                <i class="fa fa-th-list"></i>
+
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right"><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="id" value="0" checked="checked">
+                                                    <span>ID</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="name" value="1" checked="checked">
+                                                    <span>Name</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="type" value="2" checked="checked">
+                                                    <span>Type</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="mobile" value="3" checked="checked"> <span>Mobile
+                                                        Number</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="alternate_mobile" value="4" checked="checked">
+                                                    <span>Alternate Mobile</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="address" value="5" checked="checked">
+                                                    <span>Address</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="landmark" value="6" checked="checked">
+                                                    <span>Landmark</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="area" value="7" checked="checked">
+                                                    <span>Area</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="city" value="8" checked="checked">
+                                                    <span>City</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="state" value="9" checked="checked">
+                                                    <span>State</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="pincode" value="10" checked="checked">
+                                                    <span>Pincode</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="country" value="11" checked="checked">
+                                                    <span>Country</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="action" value="12" checked="checked">
+                                                    <span>Action</span></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="float-right search btn-group">
+                                        <input class="form-control
+            
+                                search-input" type="search" placeholder="Search" autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="fixed-table-container" style="padding-bottom: 0px;">
+                                    <div class="fixed-table-header" style="display: none;">
+                                        <table></table>
+                                    </div>
+                                    <div class="fixed-table-body">
+                                        <div class="fixed-table-loading table table-bordered table-hover"
+                                            style="top: 47.5px;">
+                                            <span class="loading-wrap">
+                                                <!-- <span class="loading-text" style="font-size: 32px;">Loading, please
+                                                    wait</span> -->
+                                                <span class="animation-wrap"><span class="animation-dot"></span></span>
+                                            </span>
+
+                                        </div>
+                                        <table id="address_list_table"
+                                            class="table-striped table table-bordered table-hover" data-toggle="table"
+                                            data-url="https://annadatasukhibhav.com/my-account/get-address-list"
+                                            data-click-to-select="true" data-side-pagination="server"
+                                            data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                            data-search="true" data-show-columns="true" data-show-refresh="true"
+                                            data-trim-on-search="false" data-sort-name="id" data-sort-order="desc"
+                                            data-mobile-responsive="true" data-toolbar="" data-show-export="true"
+                                            data-maintain-selected="true"
+                                            data-export-types="[&quot;txt&quot;,&quot;excel&quot;]"
+                                            data-query-params="queryParams">
+                                            <thead>
+                                                <tr>
+                                                    <th style="" data-field="id">
+                                                        <div class="th-inner sortable both desc">ID</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="name">
+                                                        <div class="th-inner ">Name</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th class="col-md-5" style="" data-field="type">
+                                                        <div class="th-inner ">Type</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="mobile">
+                                                        <div class="th-inner ">Mobile Number</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="alternate_mobile">
+                                                        <div class="th-inner ">Alternate Mobile</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="address">
+                                                        <div class="th-inner ">Address</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="landmark">
+                                                        <div class="th-inner ">Landmark</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="area">
+                                                        <div class="th-inner ">Area</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="city">
+                                                        <div class="th-inner ">City</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="state">
+                                                        <div class="th-inner ">State</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="pincode">
+                                                        <div class="th-inner ">Pincode</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="country">
+                                                        <div class="th-inner ">Country</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="action">
+                                                        <div class="th-inner sortable both">Action</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-index="0">
+                                                    <td>1</td>
+                                                    <td>Ritik</td>
+                                                    <td class="col-md-5">Home</td>
+                                                    <td>9876543210</td>
+                                                    <td>9897675859</td>
+                                                    <td>Vijay nagar indore</td>
+                                                    <td>near shivalaya</td>
+                                                    <td>Saket Nagar</td>
+                                                    <td>Indore</td>
+                                                    <td>Madhya Pradesh</td>
+                                                    <td>452010</td>
+                                                    <td>India</td>
+                                                    <td><a href="javascript:void(0)"
+                                                            class="edit-address btn btn-success btn-xs mr-1 mb-1"
+                                                            title="Edit" data-id="1" data-toggle="modal"
+                                                            data-target="#address-modal"><i class="fa fa-pen"></i></a><a
+                                                            href="javascript:void(0)"
+                                                            class="delete-address btn btn-danger btn-xs mr-1 mb-1"
+                                                            title="Delete" data-id="1"><i class="fa fa-trash"></i></a><a
+                                                            href="javascript:void(0)"
+                                                            class=" btn btn-info btn-xs mr-1 mb-1" title="Default"
+                                                            data-id="1"><i class="fa fa-check-square"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-footer">
+                                        <table>
+                                            <thead>
+                                                <tr></tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="fixed-table-pagination" style="">
+                                    <div class="float-left pagination-detail"><span class="pagination-info">
+                                            Showing 1 to 1 of 1 rows
+                                        </span><span class="page-list" style="display: none;"><span
+                                                class="btn-group dropdown dropup">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    data-toggle="dropdown">
+                                                    <span class="page-size">
+                                                        10
+                                                    </span>
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <div class="dropdown-menu"><a class="dropdown-item " href="#">5</a>
+                                                </div>
+                                            </span> rows per page</span></div>
+                                    <div class="float-right pagination" style="display: none;">
+                                        <ul class="pagination">
+                                            <li class="page-item page-pre"><a class="page-link"
+                                                    aria-label="previous page" href="javascript:void(0)">‹</a></li>
+                                            <li class="page-item active"><a class="page-link" aria-label="to page 1"
+                                                    href="javascript:void(0)">1</a></li>
+                                            <li class="page-item page-next"><a class="page-link" aria-label="next page"
+                                                    href="javascript:void(0)">›</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- address-end -->
+
+
+                <!-- wallet- -->
+                <div class="col-md-8 col-12">
+                    <div class=" border-0">
+                        <div class="card-header bg-white">
+                            <div class="row">
+                                <h1 class="col-12 text-center">Balance : ₹ 3282.75</h1>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="bootstrap-table bootstrap4">
+                                <div class="fixed-table-toolbar">
+                                    <div class="bs-bars float-left"></div>
+                                    <div class="columns columns-right btn-group float-right"><button
+                                            class="btn btn-secondary" type="button" name="refresh" aria-label="Refresh"
+                                            title="Refresh"><i class="fa fa-sync"></i> </button>
+                                        <div class="keep-open btn-group" title="Columns">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-label="Columns" title="Columns">
+                                                <i class="fa fa-th-list"></i>
+
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right"><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="id" value="0" checked="checked">
+                                                    <span>ID</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="name" value="1" checked="checked"> <span>User
+                                                        Name</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="type" value="2" checked="checked">
+                                                    <span>Type</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="amount" value="3" checked="checked">
+                                                    <span>Amount</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="status" value="4" checked="checked">
+                                                    <span>Status</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="message" value="5" checked="checked">
+                                                    <span>Message</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="date" value="6" checked="checked">
+                                                    <span>Date</span></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="float-right search btn-group">
+                                        <input class="form-control search-input" type="search" placeholder="Search"
+                                            autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="fixed-table-container" style="padding-bottom: 0px;">
+                                    <div class="fixed-table-header" style="display: none;">
+                                        <table></table>
+                                    </div>
+                                    <div class="fixed-table-body">
+                                        <div class="fixed-table-loading table table-bordered table-hover open"
+                                            style="top: 47.5px; display: none;">
+                                            <span class="loading-wrap">
+                                                <!-- <span class="loading-text" style="font-size: 32px;">Loading, please
+                                                    wait</span> -->
+                                                <span class="animation-wrap"><span class="animation-dot"></span></span>
+                                            </span>
+
+                                        </div>
+                                        <table class="table-striped table table-bordered table-hover"
+                                            data-toggle="table"
+                                            data-url="https://annadatasukhibhav.com/my-account/get-wallet-transactions"
+                                            data-click-to-select="true" data-side-pagination="server"
+                                            data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                            data-search="true" data-show-columns="true" data-show-refresh="true"
+                                            data-trim-on-search="false" data-sort-name="id" data-sort-order="desc"
+                                            data-mobile-responsive="true" data-toolbar="" data-show-export="true"
+                                            data-maintain-selected="true"
+                                            data-query-params="customer_wallet_query_params">
+                                            <thead>
+                                                <tr>
+                                                    <th style="" data-field="id">
+                                                        <div class="th-inner sortable both desc">ID</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="name">
+                                                        <div class="th-inner ">User Name</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="type">
+                                                        <div class="th-inner ">Type</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="amount">
+                                                        <div class="th-inner ">Amount</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="status">
+                                                        <div class="th-inner ">Status</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="message">
+                                                        <div class="th-inner ">Message</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="date">
+                                                        <div class="th-inner ">Date</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="no-records-found">
+                                                    <td colspan="7">No matching records found</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-footer">
+                                        <table>
+                                            <thead>
+                                                <tr></tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="fixed-table-pagination" style="display: none;">
+                                    <div class="float-left pagination-detail"><span class="pagination-info">
+                                            Showing 1 to 0 of 0 rows
+                                        </span><span class="page-list" style="display: none;"><span
+                                                class="btn-group dropdown dropup">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    data-toggle="dropdown">
+                                                    <span class="page-size">
+                                                        10
+                                                    </span>
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <div class="dropdown-menu"><a class="dropdown-item " href="#">5</a>
+                                                </div>
+                                            </span> rows per page</span></div>
+                                    <div class="float-right pagination" style="display: none;">
+                                        <ul class="pagination">
+                                            <li class="page-item page-pre"><a class="page-link"
+                                                    aria-label="previous page" href="javascript:void(0)">‹</a></li>
+                                            <li class="page-item page-next"><a class="page-link" aria-label="next page"
+                                                    href="javascript:void(0)">›</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- wallet-end -->
+
+
+                <!-- transition -->
+                <div class="col-md-8 col-12">
+                    <div class=" border-0">
+                        <div class="card-header bg-white">
+                            <h1>Transactions</h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="bootstrap-table bootstrap4">
+                                <div class="fixed-table-toolbar">
+                                    <div class="bs-bars float-left"></div>
+                                    <div class="columns columns-right btn-group float-right"><button
+                                            class="btn btn-secondary" type="button" name="refresh" aria-label="Refresh"
+                                            title="Refresh"><i class="fa fa-sync"></i> </button>
+                                        <div class="keep-open btn-group" title="Columns">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-label="Columns" title="Columns">
+                                                <i class="fa fa-th-list"></i>
+
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right"><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="id" value="0" checked="checked">
+                                                    <span>Id</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="name" value="1" checked="checked"> <span>User
+                                                        Name</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="order_id" value="2" checked="checked"> <span>Order
+                                                        Id</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="txn_id" value="3" checked="checked">
+                                                    <span>Transaction Id</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="payu_txn_id" value="4"> <span>Pay Transaction
+                                                        Id</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="amount" value="5" checked="checked">
+                                                    <span>Amount</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="status" value="6" checked="checked">
+                                                    <span>Status</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="message" value="7">
+                                                    <span>Message</span></label><label
+                                                    class="dropdown-item dropdown-item-marker"><input type="checkbox"
+                                                        data-field="txn_date" value="8" checked="checked">
+                                                    <span>Date</span></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="float-right search btn-group">
+                                        <input class="form-control
+                                         search-input" type="search" placeholder="Search" autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="fixed-table-container" style="padding-bottom: 0px;">
+                                    <div class="fixed-table-header" style="display: none;">
+                                        <table></table>
+                                    </div>
+                                    <div class="fixed-table-body">
+                                        <div class="fixed-table-loading table table-bordered table-hover"
+                                            style="top: 47.5px;">
+                                            <span class="loading-wrap">
+                                                <!-- <span class="loading-text" style="font-size: 32px;">Loading, please
+                                                    wait</span> -->
+                                                <span class="animation-wrap"><span class="animation-dot"></span></span>
+                                            </span>
+
+                                        </div>
+                                        <table class="table-striped table table-bordered table-hover"
+                                            data-toggle="table"
+                                            data-url="https://annadatasukhibhav.com/my-account/get-transactions"
+                                            data-click-to-select="true" data-side-pagination="server"
+                                            data-pagination="true" data-page-list="[5, 10, 20, 50, 100, 200]"
+                                            data-search="true" data-show-columns="true" data-show-refresh="true"
+                                            data-trim-on-search="false" data-sort-name="id" data-sort-order="desc"
+                                            data-mobile-responsive="true" data-toolbar="" data-show-export="true"
+                                            data-maintain-selected="true" data-query-params="transaction_query_params">
+                                            <thead>
+                                                <tr>
+                                                    <th style="" data-field="id">
+                                                        <div class="th-inner sortable both desc">Id</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="name">
+                                                        <div class="th-inner ">User Name</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="order_id">
+                                                        <div class="th-inner ">Order Id</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="txn_id">
+                                                        <div class="th-inner ">Transaction Id</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="amount">
+                                                        <div class="th-inner ">Amount</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="status">
+                                                        <div class="th-inner ">Status</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                    <th style="" data-field="txn_date">
+                                                        <div class="th-inner ">Date</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="no-records-found">
+                                                    <td colspan="7">No matching records found</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-footer">
+                                        <table>
+                                            <thead>
+                                                <tr></tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="fixed-table-pagination" style="display: none;">
+                                    <div class="float-left pagination-detail"><span class="pagination-info">
+                                            Showing 1 to 0 of 0 rows
+                                        </span><span class="page-list" style="display: none;"><span
+                                                class="btn-group dropdown dropup">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    data-toggle="dropdown">
+                                                    <span class="page-size">
+                                                        10
+                                                    </span>
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <div class="dropdown-menu"><a class="dropdown-item " href="#">5</a>
+                                                </div>
+                                            </span> rows per page</span></div>
+                                    <div class="float-right pagination" style="display: none;">
+                                        <ul class="pagination">
+                                            <li class="page-item page-pre"><a class="page-link"
+                                                    aria-label="previous page" href="javascript:void(0)">‹</a></li>
+                                            <li class="page-item active"><a class="page-link" aria-label="to page 1"
+                                                    href="javascript:void(0)">1</a></li>
+                                            <li class="page-item page-next"><a class="page-link" aria-label="next page"
+                                                    href="javascript:void(0)">›</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- transtions-end -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- script-all -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+
+    <!-- datatable -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
+</body>
+
+</html>
